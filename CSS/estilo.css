@@ -1,0 +1,315 @@
+
+/**@import url ('https://fonts.cdnfonts.com/css/venom');**/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+}
+
+h1{font-size: 3.5em; }
+h2{font-size: 2.7em; color: brown;}
+h3{font-size: 2.7em;}
+ul{list-style: none;}
+button{
+    font-size: 1em;
+    font-weight: bold;
+    font-style: none;
+    padding: 10px 20px;
+    border-radius: 10px ;
+    border: 1px solid rgb(5, 5, 5);
+    box-shadow: 2px 2px 10px rgb(5, 5, 5);
+    color: white; /** no cambia el color**/
+    background-color: blueviolet;
+    margin-top: 50px;
+
+}
+
+button a{
+
+    color: white;
+    text-decoration: none;
+}
+button :hover{
+
+    background-color:rgb(101, 33, 165) ;
+}
+.logo img {
+
+    width: 100px;
+}    
+
+
+
+header .logo{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+
+header .container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /**max-width: 1600px;**/
+    margin: auto;
+}
+
+header .navegador{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 5px;
+    
+    
+}
+
+.navegador ul li a{
+    text-decoration: none;
+    font-size: 37px;
+    color: black;
+    padding: 5px 12px; /** no cambia la separacion entre palabras**/
+    font-weight: bold;
+}
+
+.navegador ul li a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+#portada{
+
+    margin-top: 0px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+    position: relative;
+    /**background-image: url("Images/Venom1.jpg"); /**no muestra la foto**/
+
+}
+
+#portada img{
+    width: 100%;
+    height: 100%;
+
+}
+#portada .textoPortada{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    color: black;
+    background-color: white;
+    height: 100%;
+    justify-content: center;
+    
+    
+}
+.cajaSobreMi{
+
+    padding: 10px 20px;
+}
+.logoSobreMi img{
+
+    width: 50px;
+
+}
+
+.logoSobreMi{
+    display: flex;
+    font-size: 0.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.cajaSobreMi p{
+
+    text-align: center;
+}
+
+#seccionNovedades p{
+
+    font-size: 2em;
+    color: red;
+    text-align: center;
+    font-weight:bold ;
+}
+
+#seccionFotos .containerFotos{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-position: center center;
+    background-size: cover;
+    margin: 10px;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 20px;
+   
+}
+
+#seccionFotos img{
+    width:100% ;
+    object-fit:cover;
+}
+
+
+
+
+#seccionFotos .fotoDerecha{
+
+    grid-row-start:span 2;
+    display: none;
+}
+
+#seccionFotos .fotoAbajo{
+
+    grid-column-start: span 2;
+    display: none;
+}
+
+footer .containerFooter {
+
+    background-color: black;
+    display: flex;
+    padding: 30px;
+    color: white;
+    justify-content: space-around;
+    
+}
+.footerVenom{
+    text-align: left;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+.footerAutor{
+
+    text-align: right;
+}
+.footerVenom p{
+    display: flex;
+    font-size: 1em;
+    
+}
+
+
+
+.ocultarDiv{
+
+    display: none;
+}
+
+
+
+
+
+/**RESPONSIVE**/
+
+
+
+
+
+@media (min-width: 720px){
+    
+    
+    
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header .navegador ul{
+       display: flex;
+       padding: 0;  
+    }
+
+    #portada .textoPortada{
+
+        right: 50px;
+        
+    }
+    #seccionFotos .containerFotos{
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-rows: repeat(2);
+        
+    }
+
+
+    
+    .fotoDerecha img{
+
+        display: grid;
+        object-fit: cover;
+        height: 100%;
+        
+    }
+
+
+
+    .fotoArriba1 img:hover{
+
+       -webkit-transform: rotate(-45deg);
+       transition: 1s;
+    }
+
+    .fotoArriba2 img:hover{
+
+        -webkit-transform: rotate(-45deg);
+       transition: 1s;
+    }
+
+
+    .fotoDerecha img:hover{
+
+        -webkit-transform: rotate(-45deg);
+       transition: 1s;
+    }
+
+    .fotoAbajo img:hover{
+
+        -webkit-transform: rotate(-45deg);
+       transition: 1s;
+    }
+   
+
+    #seccionFotos .fotoDerecha{
+        display: grid;
+        
+    }
+    #seccionFotos .fotoAbajo{
+        display: grid;
+        grid-column-start: span 2;
+    }    
+    .ocultarDiv{
+        display: contents;
+    }
+}
+
